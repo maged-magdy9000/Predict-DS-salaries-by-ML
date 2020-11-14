@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DS Jobs Salary Predictor</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form  validate-form" action="/predict" method="post">
+				<span class="contact100-form-title">
+					 DS & Analytic Jobs Salary Predictor in USA With Machine learning
+				</span>
+
+				<label class="label-input100" for="first-name">Tell us some info about job </label>
+				<label class="label-input100" for="first-name">Job Title*</label>
+				    <div>
+						<select class="selection-2" name="job title" style="width:200px;">
+							<option value="job_simp_data scientist">data scientist</option>
+							<option value="job_simp_data engineer">data engineer</option>
+							<option value="job_simp_director">director</option>
+							<option value="job_simp_analyst">analyst</option>
+							<option value="job_simp_manager">manager</option>
+							<option value="job_simp_ml">ml</option>
+							<option value="job_simp_other">other</option>
+						</select>
+				        </div>
+				
+				<label class="label-input100" for="email">Career Level*</label>
+				<div>
+						<select class="selection-2" name="career level" style="width:200px;">
+							<option value="seniority_junior">junior</option>
+							<option value="seniority_senior">senior</option>
+							<option value="seniority_na">na</option>
+						</select>
+				        </div>
+
+				<label class="label-input100" for="phone">Programming language*</label>
+				<div>
+						<select class="selection-2" name="programming language" style="width:200px;">
+							<option value="Python">Python</option>
+							<option value="R">R</option>
+						</select>
+				        </div>
+
+				<label class="label-input100" for="message">State*</label>
+				<div>
+						<select class="selection-2" name="state" style="width:200px;">
+							<option value="job_location_state_ NM">NM</option>
+							<option value="job_location_state_ MD">MD</option>
+							<option value="job_location_state_ FL">FL</option>
+							<option value="job_location_state_ WA">WA</option>
+							<option value="job_location_state_ NY">NY</option>
+							<option value="job_location_state_ TX">TX</option>
+							<option value="job_location_state_ CA">CA</option>
+							<option value="job_location_state_ VA">VA</option>
+							<option value="job_location_state_ MA">MA</option>
+							<option value="job_location_state_ NJ">NJ</option>
+							<option value="job_location_state_ CO">CO</option>
+							<option value="job_location_state_ IL">IL</option>
+							<option value="job_location_state_ KY">KY</option>
+							<option value="job_location_state_ OR">OR</option>
+							<option value="job_location_state_ CT">CT</option>
+							<option value="job_location_state_ MI">MI</option>
+							<option value="job_location_state_ OH">OH</option>
+							<option value="job_location_state_ AL">AL</option>
+							<option value="job_location_state_ MO">MO</option>
+							<option value="job_location_state_ PA">PA</option>
+							<option value="job_location_state_ GA">GA</option>
+							<option value="job_location_state_ IN">IN</option>
+							<option value="job_location_state_ LA">LA</option>
+							<option value="job_location_state_ WI">WI</option>
+							<option value="job_location_state_ NC">NC</option>
+							<option value="job_location_state_ AZ">AZ</option>
+							<option value="job_location_state_ NE">NE</option>
+							<option value="job_location_state_ MN">MN</option>
+							<option value="job_location_state_ DC">DC</option>
+							<option value="job_location_state_ UT">UT</option>
+							<option value="job_location_state_ TN">TN</option>
+							<option value="job_location_state_ DE">DE</option>
+							<option value="job_location_state_ ID">ID</option>
+							<option value="job_location_state_ RI">RI</option>
+							<option value="job_location_state_ IA">IA</option>
+							<option value="job_location_state_ SC">SC</option>
+							<option value="job_location_state_ KS">KS</option>
+
+						</select>
+				        </div>
+				        <label class="label-input100" for="phone">Size of Company*</label>
+				<div>
+						<select class="selection-2" name="size of company" style="width:300px;">
+							<option value="Size_1 to 50 employees">1 to 50 employees</option>
+							<option value="Size_51 to 200 employees">51 to 200 employees</option>
+							<option value="Size_201 to 500 employees">201 to 500 employees</option>
+							<option value="Size_501 to 1000 employees">501 to 1000 employees</option>
+							<option value="Size_1001 to 5000 employees">1001 to 5000 employees</option>
+							<option value="Size_5001 to 10000  mployees">5001 to 10000 employees</option>
+							<option value="Size_10000+ employees">10000+ employees</option>
+							
+							
+
+						</select>
+				        </div>
+				        <label class="label-input100" for="phone">Sector*</label>
+				<div>
+						<select class="selection-2" name="sector" style="width:400px;">
+							<option value="Sector_Aerospace & Defense">Aerospace & Defense</option>
+							<option value="Sector_Health Care">Health Care</option>
+							<option value="Sector_Business Services">Business Services</option>
+							<option value="Sector_Oil, Gas, Energy & Utilities">Oil, Gas, Energy & Utilities</option>
+							<option value="Sector_Real Estate">Real Estate</option>
+							<option value="Sector_Finance">Finance</option>
+							<option value="Sector_Information Technology">Information Technology</option>
+							<option value="Sector_Retail">Retail</option>
+							<option value="Sector_Biotech & Pharmaceuticals">Biotech & Pharmaceuticals</option>
+							<option value="Sector_Media">Media</option>
+							<option value="Sector_Insurance">Insurance</option>
+							<option value="Sector_Transportation & Logistics">Transportation & Logistics</option>
+							<option value="Sector_>Telecommunications">Telecommunications</option>
+							<option value="Sector_Manufacturing">Manufacturing</option>
+							<option value="Sector_Mining & Metals">Mining & Metals</option>
+							<option value="Sector_Government">Government</option>
+							<option value="Sector_Agriculture & Forestry">Agriculture & Forestry</option>
+							<option value="Sector_Education">Education</option>
+							<option value="Sector_Travel & Tourism">Travel & Tourism</option>
+							<option value="Sector_Non-Profit">Non-Profit</option>
+							<option value="Sector_Arts, Entertainment & Recreation">Arts, Entertainment & Recreation</option>
+							<option value="Sector_Construction, Repair & Maintenance">Construction, Repair & Maintenance</option>
+							<option value="Sector_Accounting & Legal">Accounting & Legal'</option>
+							<option value="Sector_Consumer Services">Consumer Services</option>
+
+						</select>
+				        </div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						Predict
+						<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+					</button>
+				</div>
+				{% if result %}
+			    <p style='text-align: center;margin-top: 15px;font-size: large;'>Salary Estimated is: <b style="color: #259eba;">{{ result }}</b> $.</p>
+			    {% endif %}
+			</form>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url('/static/images/123.jpg');">
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/static/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="/static/https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+</body>
+</html>
